@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    .toggle-nav {
+        @apply -mt-60 sm:-mt-0;
+    }
+
+    .toggle-search {
+        @apply mt-4 sm:mt-0;
+    }
+
+    .active-tab {
+        @apply font-bold border-b-2 duration-150
+    }
+}

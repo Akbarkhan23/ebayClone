@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics, Cars, Fashion, Collectibles, Coupons and More | eBay</title>
+
+    <!-- font awesome cdn  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- swipper js  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="/dist/output.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="flex flex-col h-full container mx-auto text-xs sm:p-1">
+        <!-- toggle navbar  -->
+        <div class="menu bg-blue-600 text-white z-10 pt-1 pl-1 sm:hidden">
+            <i class="fa-solid fa-bars text-xl mb-2 cursor-pointer" onclick="toggleNav()"></i>
+        </div>
+        <!-- navbar  -->
+        <nav
+            class="navbar bg-[#f2f2f4] rounded sm:rounded-none capitalize px-1 toggle-nav duration-500 block sm:flex sm:justify-between items-center sm:bg-white sm:border-b-2 border-b-[#ececec] mb-4 ">
+            <ul class="sm:flex sm:text-sm sm:gap-3">
+                <li
+                    class="py-1 active:text-slate-400 sm:font-normal sm:text-black sm:border-b-2 sm:hover:border-b-2 border-white hover:border-black">
+                    <a href="#">sign-in</a>
+                </li>
+                <li
+                    class="py-1 active:text-slate-400 sm:font-normal sm:text-black sm:border-b-2 sm:hover:border-b-2 border-white hover:border-black">
+                    <a href="#">Daily deals</a>
+                </li>
+                <li
+                    class="py-1 active:text-slate-400 sm:font-normal sm:text-black sm:border-b-2 sm:hover:border-b-2 border-white hover:border-black">
+                    <a href="#">Help and contact</a>
+                </li>
+            </ul>
+            <ul class="sm:flex sm:text-sm sm:gap-4">
+                <li
+                    class="py-1 active:text-slate-400 sm:font-normal sm:text-black sm:border-b-2 sm:hover:border-b-2 border-white hover:border-black">
+                    <a href="#">sign to </a>
+                </li>
+                <li
+                    class="py-1 active:text-slate-400 sm:font-normal sm:text-black sm:border-b-2 sm:hover:border-b-2 border-white hover:border-black">
+                    <a href="#">sell</a>
+                </li>
+                <li
+                    class="py-1 active:text-slate-400 sm:font-normal sm:text-black sm:border-b-2 sm:hover:border-b-2 border-white hover:border-black">
+                    <a href="#">watchlist</a>
+                </li>
+                <li
+                    class="py-1 active:text-slate-400 sm:font-normal sm:text-black sm:border-b-2 sm:hover:border-b-2 border-white hover:border-black">
+                    <a href="#">my ebay</a>
+                </li>
+                <li
+                    class="py-1 active:text-slate-400 sm:font-normal sm:text-black sm:border-b-2 sm:hover:border-b-2 border-white hover:border-black ">
+                    <i class="fa-regular fa-bell"></i>
+                </li>
+                <li
+                    class="py-1 active:text-slate-400 sm:font-normal sm:text-black sm:border-b-2 sm:hover:border-b-2 border-white hover:border-black ">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </li>
+            </ul>
+        </nav>
+        <!-- search  -->
+        <main
+            class="search flex justify-between items-center p-1 sm:p-0 sm:px-1 gap-1 toggle-search duration-500 sm:border-b-2 border-b-[#ececec] sm:pb-2 mb-8">
+            <div class="logo w-12 sm:w-32">
+                <img src="/src/assets/logo (1).svg" alt="" width="100%" height="100%">
+            </div>
+            <div
+                class="search-inp bg-[#f2f2f4] sm:bg-white  text-xs sm:text-sm border-2 border-black flex items-center sm:mx-2 px-2 flex-1 ">
+                <i class="fa-solid fa-magnifying-glass text-gray-400 text-xs"></i>
+                <input type="search" class="bg-transparent w-full text-xs p-2 outline-none border-none lg:text-lg"
+                    placeholder="Search for anything">
+            </div>
+            <button
+                class="bg-blue-600 text-white p-2 border-2 border-blue-600 text-xs lg:text-lg sm:hover:bg-blue-900 hover:border-blue-900 duration-150 sm:w-1/6">Search
+            </button>
+        </main>
+        <!-- nav tabs  -->
+        <div class="nav-tabs lg:w-10/12 text-lg mt-2 mb-4 mx-auto hidden sm:block">
+            <ul class="flex gap-4 justify-around text-sm">
+                <li><a href="#" class="list-item capitalize border-b-2 hover:border-black"
+                        onclick="activeTab(this)">Home</a></li>
+                <li><a href="#" class="list-item capitalize border-b-2 hover:border-black"
+                        onclick="activeTab(this)">saved</a></li>
+                <li><a href="#" class="list-item capitalize border-b-2 hover:border-black"
+                        onclick="activeTab(this)">electronics</a></li>
+                <li><a href="#" class="list-item capitalize border-b-2 hover:border-black"
+                        onclick="activeTab(this)">motors</a></li>
+                <li><a href="#" class="list-item capitalize border-b-2 hover:border-black"
+                        onclick="activeTab(this)">collection and art</a></li>
+                <li><a href="#" class="list-item capitalize border-b-2 hover:border-black"
+                        onclick="activeTab(this)">sports</a></li>
+                <li><a href="#" class="list-item capitalize border-b-2 hover:border-black"
+                        onclick="activeTab(this)">health
+                        and beauty</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- hero section & slider  -->
+    <div class="hero-section overflow-hidden h-80 bg-red-500">
+        <div class="slider relative flex">
+            <div class="hero-img w-full absolute slide duration-500">
+                <img src="./assets/1.png" alt="Image 1">
+            </div>
+            <div class="hero-img w-full absolute slide duration-500">
+                <img src="./assets/2.png" alt="Image 2">
+            </div>
+            <div class="hero-img w-full absolute slide duration-500">
+                <img src="./assets/3.png" alt="Image 3">
+            </div>
+        </div>
+        <div class="nav-icons z-10 flex justify-between w-full h-fit px-2 mt-2">
+            <i class="fa-solid fa-circle-chevron-left z-10 text-xs left-10 sm:text-4xl text-white opacity-75 md:hover:scale-125 duration-150 cursor-pointer active:text-slate-200 prev"
+                onclick="prevSlide()"></i>
+            <i class="fa-solid fa-circle-chevron-right z-10 text-xs right-10 sm:text-4xl text-white opacity-75 md:hover:scale-125 duration-150 cursor-pointer active:text-slate-200 next"
+                onclick="nextSlide()"></i>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
